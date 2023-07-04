@@ -1,0 +1,11 @@
+
+.contBtn{
+    background-color: #fff;
+    padding: 10px 25px !important;
+    border-radius: 20px;
+    font-family: "Ink Free";
+    font-size: 20px;
+    cursor: pointer;
+    color: #000 !important;
+    font-weight: 700 !important;
+}

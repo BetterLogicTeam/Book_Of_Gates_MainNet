@@ -1,0 +1,36 @@
+/* .scroll-button {
+  position: fixed;
+  bottom: 20px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 9999;
+}
+
+.scroll-button:hover {
+  opacity: 1;
+}
+
+.scroll-up {
+  left: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.scroll-down {
+  right: 20px;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #333;
+} */
+
+/* .scroll-down:hover {
+  background-color
+} */

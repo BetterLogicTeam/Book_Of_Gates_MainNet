@@ -1,0 +1,14 @@
+
+@font-face {
+    font-family: "NewGardinerSMP";
+    src:
+     url("./fonts/NewGardinerSMP.ttf") format('truetype');
+    font-weight: bold;
+
+}
+@font-face {
+    font-family: "Ink Free";
+    src: 
+     url("./fonts/Inkfree.ttf") format("truetype");
+    font-weight: bold;
+    } 

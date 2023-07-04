@@ -1,0 +1,25 @@
+
+.vertical-timeline-element--work h3{
+    /* border-radius: 50px; */
+font-family: "Ink Free";
+font-size: 1.6rem;
+}
+.vertical-timeline-element--work h1{
+font-family: "Ink Free";
+font-size: 35px;
+font-weight: bold;
+
+}
+.roadmap-root {
+    padding-bottom: 3rem;
+}
+.vertical-timeline-element-title span {
+    font-size: 40px;
+    padding-left: 5px;
+}
+.roadmap_para {
+    text-align:  center;
+    font-size: 30px;
+    font-family: "Ink Free";
+
+}

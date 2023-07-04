@@ -1,0 +1,76 @@
+{
+  "name": "book_of_gates",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@mui/material": "^5.11.14",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "aos": "^2.3.4",
+    "axios": "^1.3.5",
+    "bootstrap": "^5.2.3",
+    "dotenv": "^16.1.4",
+    "dotenv-webpack": "^8.0.1",
+    "from-exponential": "^1.1.1",
+    "is-react": "^1.5.4",
+    "react": "^18.1.0",
+    "react-background-video-player": "^1.1.8",
+    "react-bootstrap": "^2.7.2",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-countdown": "^2.3.5",
+    "react-csv": "^2.2.2",
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.6.0",
+    "react-infinite-scroll-up-n-down": "^1.3.3",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-player": "^2.11.2",
+    "react-redux": "^7.2.4",
+    "react-responsive-video": "^1.3.1",
+    "react-reveal": "^1.2.2",
+    "react-router-dom": "^6.9.0",
+    "react-scripts": "4.0.3",
+    "react-scroll": "^1.8.7",
+    "react-scroll-down": "^0.1.6",
+    "react-scroll-parallax": "^3.2.0",
+    "react-scroll-up-button": "^1.6.4",
+    "react-slideshow-image": "^3.7.5",
+    "react-toastify": "^6.2.0",
+    "react-vertical-timeline-component": "^3.5.2",
+    "reactjs-media": "^2.2.0",
+    "redux": "^4.1.1",
+    "redux-thunk": "^2.3.0",
+    "swiper": "^8.1.5",
+    "web-vitals": "^1.0.1",
+    "web3": "^1.5.1",
+    "web3-eth-contract": "^1.5.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

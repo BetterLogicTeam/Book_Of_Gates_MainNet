@@ -1,0 +1,91 @@
+
+.root {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0px;
+    /* background-color: red; */
+}
+.main-grid {
+    display: flex;
+    justify-content: space-evenly;
+}
+.icons {
+    display: flex;
+    /* justify-content: space-between; */
+    /* color: #000; */
+    margin: 10px;
+}
+.icons span {
+    color: #fff;
+    padding: '0px 15px'
+}
+.icon-list {
+    flex-direction: column;
+}
+.header {
+   font-family: "Ink Free" ;
+    letter-spacing: 3px;
+    font-size: 2rem;
+}
+.para {
+       font-family: "Ink Free";
+    color: #fff;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+li span {
+       font-family: "Ink Free";
+
+    color: #fff;
+    /* padding: 5px 8px; */
+    /* margin-right: 5px; */
+    font-size: 20px;
+}
+.img {
+    display: flex;
+    justify-content: center;
+
+}
+.main-div-style h1 {
+    font-size: 40px;
+    color: #fff;
+    font-weight: bold;
+}
+.main-div-style p {
+    font-size: 25px;
+    color: #fff;
+} 
+.popup {
+    width: 380px;
+    height: 400px;
+}
+.took {
+    font-family: "Ink Free";
+    
+}
+
+
+.newgrdain_icon{
+    font-family: Ink Free;
+    font-size: 2rem;
+    font-weight: 900;
+
+}
+.icon {
+    width: 3%;
+    height: 3%;
+    border: none;
+    margin-top: 2px;
+    margin-right: 16px;
+  
+}
+
+.para_div {
+display: flex;
+justify-content: center;
+}
+.attributes_element {
+    font-family: "Ink Free";
+    font-size: 25px;
+    margin: 20px 0px;
+}
