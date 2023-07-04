@@ -16,7 +16,7 @@ import Web3 from "web3";
 function Mint() {
   const [Owner_Address, setOwner_Address] = React.useState("");
   const [data, setData] = useState(false);
-  const [Connect_wallet, setConnect_wallet] = useState("Connnect Wallet");
+  const [Connect_wallet1, setConnect_wallet1] = useState("Connnect Wallet");
   const [maxsupply, setmaxsupply] = useState("--");
   const [totalsupply, settotalsupply] = useState("--");
   const [Threshold, setThreshold] = useState("--");
@@ -48,7 +48,7 @@ function Mint() {
 
   const Connect_Wallet = async () => {
     try {
-      const webSupply = new Web3("https://bsc-testnet.public.blastapi.io");
+      const webSupply = new Web3("https://eth-mainnet-public.unifra.io");
 
       const web3 = window.web3;
       let contractOf = new webSupply.eth.Contract(
@@ -59,7 +59,7 @@ function Mint() {
       console.log("Owner", Owner);
       setOwner_Address(Owner);
       let acc = await loadWeb3();
-      setConnect_wallet(acc);
+      setConnect_wallet1(acc);
       setAddress(acc);
       setData(true);
       getdata(acc);
@@ -148,7 +148,7 @@ function Mint() {
                 let UserID = window.location.href.split("=");
                 UserID = UserID[UserID.length - 1];
 
-                let response = await axios.post('https://refferal.archiecoin.online/Get_Refferal_Address',{
+                let response = await axios.post('https://refferal.bookofgatesofficial.com/Get_Refferal_Address',{
                   userName:UserID
                 })
                 console.log("response",response.data.data);
@@ -156,7 +156,7 @@ function Mint() {
 
                 console.log("refferal",UserID);
                 let res = await axios.get(
-                  `https://refferal.archiecoin.online/Get_Refferal_record?Refferal=${response.data.data}`
+                  `https://refferal.bookofgatesofficial.com/Get_Refferal_record?Refferal=${response.data.data}`
                 );
                 if (res.data.success == true) {
                   await contractOf.methods.mint(count).send({
@@ -166,7 +166,7 @@ function Mint() {
                   toast.success("Minted Successfully");
 
                   let Add_Refferal = await axios.post(
-                    `https://refferal.archiecoin.online/Add_Refferal_record`,
+                    `https://refferal.bookofgatesofficial.com/Add_Refferal_record`,
                     {
                       Refferal: acc,
                     }
@@ -175,7 +175,7 @@ function Mint() {
                   toast.success(Add_Refferal.data.msg);
 
                   let Add_Refferal_Record = await axios.post(
-                    "https://refferal.archiecoin.online/Add_Refferal_data",
+                    "https://refferal.bookofgatesofficial.com/Add_Refferal_data",
                     {
                       Refferal_Address: response.data.data,
                       Minter_Address: acc,
@@ -195,7 +195,7 @@ function Mint() {
                 toast.success("Minted Successfully");
 
                 let Add_Refferal = await axios.post(
-                  `https://refferal.archiecoin.online/Add_Refferal_record`,
+                  `https://refferal.bookofgatesofficial.com/Add_Refferal_record`,
                   {
                     Refferal: acc,
                   }
@@ -204,7 +204,7 @@ function Mint() {
                 toast.success(Add_Refferal.data.msg);
 
                 let Add_Refferal_Record = await axios.post(
-                  "https://refferal.archiecoin.online/Add_Refferal_data",
+                  "https://refferal.bookofgatesofficial.com/Add_Refferal_data",
                   {
                     Refferal_Address: acc,
                     Minter_Address: acc,
@@ -254,12 +254,12 @@ function Mint() {
   };
 
   useEffect(() => {
-    if (Connect_wallet.startsWith("0x")) {
-      setRefAddress(`${window.location.origin}/mint/?ref=${Connect_wallet}`);
+    if (Connect_wallet1.startsWith("0x")) {
+      setRefAddress(`${window.location.origin}/mint/?ref=${Connect_wallet1}`);
     } else {
       setRefAddress("Connect wallet");
     }
-  }, [Connect_wallet]);
+  }, [Connect_wallet1]);
 
   return (
     <div className="">

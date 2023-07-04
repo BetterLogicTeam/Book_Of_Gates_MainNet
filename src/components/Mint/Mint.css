@@ -114,6 +114,10 @@
     .modal-content {
         margin-top: 150px !important;
     }
+    .mint_main{
+        height: auto;
+        padding-bottom: 3rem !important;
+    }
 }
 
 @media (min-width:500px) and (max-width: 800px) {
