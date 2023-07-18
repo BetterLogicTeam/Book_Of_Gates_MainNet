@@ -234,7 +234,7 @@ function Mint() {
   const Completionist = () => {
     return (
       <>
-        <div className="text_days fs-5 ">Public Sale Started</div>
+        <div className="text_days fs-5 ">Date of Sale TBA</div>
       </>
     );
   };
@@ -405,6 +405,9 @@ function Mint() {
                                 _ngcontent-bhd-c59=""
                                 class="btn btn-eth crypto-btn my-1 py-2 px-1 w-80 my-2"
                                 onClick={() => Connect_Wallet()}
+                                disabled={true}
+                                style={{cursor:"no-drop"}}
+
                               >
                                 <img
                                   _ngcontent-bhd-c59=""
@@ -421,11 +424,13 @@ function Mint() {
                             </>
                           ) : (
                             <>
-                              <div className="">
+                              <div className=""    style={{cursor:"no-drop"}}>
                                 <button
                                   _ngcontent-bhd-c59=""
                                   class="btn btn-eth crypto-btn my-1 py-2 px-1 w-80 my-2"
+                                  disabled={true}
                                   onClick={() => Mint_Nft()}
+                                  style={{cursor:"no-drop"}}
                                 >
                                   <img
                                     _ngcontent-bhd-c59=""

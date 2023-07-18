@@ -65,7 +65,7 @@ hiding in chests at every Gate! Mystery, adventure and high floor prices await!
                 {/* <span>TBA</span> */}
               </h3>
               <p>
-              Eth Buy Backs, 1:1 Characters, Limited Covers, and the First EdiƟon Graphic Novel Vol. I.
+              Eth Buy Backs, 1:1 Characters, Limited Covers, and the First Edition Graphic Novel Vol. I.
               </p>
             </div>
           </Fade>

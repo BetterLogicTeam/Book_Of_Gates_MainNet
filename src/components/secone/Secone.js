@@ -7,6 +7,7 @@ import "./secone.css";
 import { makeStyles } from "@material-ui/core";
 import { height } from "@mui/system";
 
+
 const styles = makeStyles(() => ({
   grid: {
     display: "flex",  
@@ -35,7 +36,7 @@ function Secone() {
     >
     
      <video autoPlay loop muted className="w-100 h-100" style={{width: "100%", height: "100%"}} sm={{height: "55vh"}}>
-      <source src="https://skywalker.infura-ipfs.io/ipfs/QmRxMJugqqa8tLhocesT8aJGqHgpBDuDirwNi6iCiyvv11" type="video/mp4" />
+      <source src={Video} type="video/mp4" />
      </video>
     </Grid>
     <div></div>

@@ -9,6 +9,7 @@ import Secone from '../secone/Secone'
 import Secthree from '../secthree/Secthree'
 import ContinousSlider from '../SliderImages/ContinousSlider'
 
+
 function Landing() {
   return (
     <div>

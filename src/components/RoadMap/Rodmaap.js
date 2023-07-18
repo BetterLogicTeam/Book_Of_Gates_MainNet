@@ -35,7 +35,7 @@ function Rodmaap() {
       <div className="roadmap-root" id="Roadmap">
         <Typography className={classes.header}>Roadmap</Typography>
         <h3 className={classes.roadmap_para}>
-        Here’s what comes aŌer the Public Mint.
+        Here’s what comes after the Public Mint.
         </h3>
         <VerticalTimeline>
           <VerticalTimelineElement
@@ -91,7 +91,7 @@ function Rodmaap() {
               LIMITED EDITION COVERS
             </h1>
             <h3>
-            5 different limited‐ediƟon collecƟble covers will serve as Ɵckets to the Graphic Novel.
+            5 different limited‐edition collectable covers will serve as tickets to the Graphic Novel.
             </h3>
           </VerticalTimelineElement>
 
@@ -110,7 +110,7 @@ function Rodmaap() {
               BOOK OF GATES VOL. I
             </h1>
             <h3>
-            The First EdiƟon Graphic Novel, Vol. I, will be released to all Treasure Hunt winners.
+            The First Edition Graphic Novel, Vol. I, will be released to all Treasure Hunt winners.
             </h3>
           </VerticalTimelineElement>
 
@@ -149,7 +149,7 @@ function Rodmaap() {
             NFT TRADING GAME
             </h1>
             <h3>
-            Trade, collect and baƩle other NFT holders in the upcoming Trading Plaƞorm.
+            Trade, collect and battle other NFT holders in the upcoming Trading Platform.
             </h3>
           </VerticalTimelineElement>
 
@@ -167,7 +167,7 @@ function Rodmaap() {
             PHASE 2
             </h1>
             <h3>
-            Awesome NFT collecƟon with Buybacks of over $1,000,000! All Phase 1 Holders mint Phase
+            Awesome NFT collection with Buybacks of over $1,000,000! All Phase 1 Holders mint Phase
 2 for .01Eth!
             </h3>
           </VerticalTimelineElement>

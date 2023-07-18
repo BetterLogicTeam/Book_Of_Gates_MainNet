@@ -152,7 +152,7 @@ function Footer() {
               <img src="https://opensea.io/static/images/logos/opensea.svg" className={classes.opensea_btn_img_hxn} />
             </a>
 
-            <a href="https://etherscan.io/address/0x7c83bc00ce502ed1c87033dc681e67a859a425ae" target="_blank">
+            <a href="#" >
               <img src={eth} className={classes.opensea_btn_img_hxn} />
             </a>
           </div>

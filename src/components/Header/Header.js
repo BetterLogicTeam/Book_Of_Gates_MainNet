@@ -122,18 +122,20 @@ function Header() {
               lg={2}
               className={classes.logo_grid}
             >
-              
-            <Link to="/"> <img src="/images/logo.png" alt="#" className={classes.logo} /></Link>
-              
+
+              <Link to="/"> <img src="/images/logo.png" alt="#" className={classes.logo} /></Link>
+
             </Grid>
             <Grid item xs={6} sm={4} md={4} lg={4}>
               {/* NESTED GRID */}
               <>
                 <Grid container justifyContent="flex-end" alignItems="center">
-                  <Grid item xs={6} sm={6} md={4} lg={4} style={{width: "auto"}}>
+                  <Grid item xs={6} sm={6} md={4} lg={4} style={{ width: "auto" }}>
                     {" "}
-                  <Link to="/mint">  <button
-                      className={classes.navBarTextbtn}
+                    <a href="https://discord.com/invite/aUKY8zVQVg" target="_blank">
+
+                      <button
+                        className={classes.navBarTextbtn}
                       // onClick={(e) => {
                       //   e.preventDefault();
                       //   window.open(
@@ -141,11 +143,12 @@ function Header() {
                       //     "_blank"
                       //   );
                       // }}
-                    >
-                      Mint Now
-                    </button></Link>
+                      >
+                        Discord
+                      </button>
+                    </a>
 
-                    
+
                   </Grid>
                   {/* <Grid item xs={6} sm={6} md={4} lg={4} style={{width: "auto"}}>
                   <Link to="/TreasureMap">  <button
@@ -160,7 +163,7 @@ function Header() {
                   </Grid>
                 </Grid>
 
-                
+
               </>
             </Grid>
           </Grid>
