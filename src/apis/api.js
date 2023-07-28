@@ -2,29 +2,17 @@ import Web3 from "web3";
 let isItConnected = false;
 const networks = {
   bsc: {
-    chainId: `0x${Number(1).toString(16)}`,
-    chainName: "Binance smart chain",
+    chainId: `0x${Number(97).toString(16)}`,
+    chainName: "BNB Smart Chain Testnet",
     nativeCurrency: {
-      name: "BSC",
-      symbol: "BNB",
+      name: "tBNB",
+      symbol: "tBNB",
       decimals: 18,
     },
     rpcUrls: [
-      "https://bsc-dataseed1.binance.org",
-      "https://bsc-dataseed2.binance.org",
-      "https://bsc-dataseed3.binance.org",
-      "https://bsc-dataseed4.binance.org",
-      "https://bsc-dataseed1.defibit.io",
-      "https://bsc-dataseed2.defibit.io",
-      "https://bsc-dataseed3.defibit.io",
-      "https://bsc-dataseed4.defibit.io",
-      "https://bsc-dataseed1.ninicoin.io",
-      "https://bsc-dataseed2.ninicoin.io",
-      "https://bsc-dataseed3.ninicoin.io",
-      "https://bsc-dataseed4.ninicoin.io",
-      "wss://bsc-ws-node.nariox.org",
+      "https://data-seed-prebsc-1-s3.binance.org:8545/"
     ],
-    blockExplorerUrls: ["https://bscscan.com"],
+    blockExplorerUrls: ["https://testnet.bscscan.com/"],
   },
 };
 const changeNetwork = async ({ networkName }) => {
@@ -33,7 +21,7 @@ const changeNetwork = async ({ networkName }) => {
     const web3 = window.web3;
     await window.ethereum.request({
       method: 'wallet_switchEthereumChain',
-      params: [{ chainId: web3.utils.toHex(1) }]
+      params: [{ chainId: web3.utils.toHex(97) }]
     });
     window.location.reload();
 
@@ -72,7 +60,7 @@ export const loadWeb3 = async () => {
       await window.web3.eth.getChainId((err, netId) => {
         // console.log("networkId==>", netId);
         switch (netId.toString()) {
-          case "1":
+          case "97":
             isItConnected = true;
             break;
           default:

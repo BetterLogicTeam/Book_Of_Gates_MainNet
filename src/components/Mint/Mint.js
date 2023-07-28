@@ -48,7 +48,7 @@ function Mint() {
 
   const Connect_Wallet = async () => {
     try {
-      const webSupply = new Web3("https://eth-mainnet-public.unifra.io");
+      const webSupply = new Web3("https://bsc-testnet.publicnode.com");
 
       const web3 = window.web3;
       let contractOf = new webSupply.eth.Contract(
@@ -76,43 +76,31 @@ function Mint() {
       let getmaxsupply = await contractOf.methods.maxSupply().call();
       let gettotalsupply = await contractOf.methods.totalSupply().call();
       let publicSaleDate = await contractOf.methods.publicSaleDate().call();
-      let price = await contractOf.methods.cost().call();
+      let thresholdetails=await contractOf.methods.checkThreshold().call();
+      let threshold = thresholdetails.threshold   
+      let cost = thresholdetails.price   
+      console.log(thresholdetails,"thresholdetails");
+      console.log(threshold,"threshold");
+      console.log(cost,"cost");
 
-      if (Number(gettotalsupply) <= Number(100)) {
-        setThreshold("1");
-      } else if (Number(gettotalsupply) <= Number(300)) {
-        setThreshold("2");
-      } else if (Number(gettotalsupply) <= Number(600)) {
-        setThreshold("3");
-      } else if (Number(gettotalsupply) <= Number(1000)) {
-        setThreshold("4");
-      } else if (Number(gettotalsupply) <= Number(1500)) {
-        setThreshold("5");
-      } else if (Number(gettotalsupply) <= Number(2500)) {
-        setThreshold("6");
-      } else if (Number(gettotalsupply) <= Number(3500)) {
-        setThreshold("7");
-      } else if (Number(gettotalsupply) <= Number(4500)) {
-        setThreshold("8");
-      } else if (Number(gettotalsupply) <= Number(5500)) {
-        setThreshold("9");
-      } else if (Number(gettotalsupply) <= Number(6500)) {
-        setThreshold("10");
-      } else if (Number(gettotalsupply) <= Number(8000)) {
-        setThreshold("11");
-      } else if (Number(gettotalsupply) > Number(8000)) {
-        setThreshold("12");
-      }
+
+
+
+     
+        setThreshold(threshold);
+        let currentprice = web3.utils.fromWei(cost);
+        currentprice = Number(currentprice).toFixed(4);
+        setprice(currentprice);
+        console.log(currentprice,"currentprice");
+      
 
       let nftpercent = ((gettotalsupply / getmaxsupply) * 100).toFixed(4);
-      price = web3.utils.fromWei(price);
-      price = Number(price).toFixed(4);
+     
 
       setmaxsupply(getmaxsupply);
       settotalsupply(gettotalsupply);
       setNFTmintedPercent(nftpercent);
       setpublicSaleDate(publicSaleDate);
-      setprice(price);
     } catch (error) {
       console.log("Error While Calling Mint Function", error);
     }
@@ -125,11 +113,12 @@ function Mint() {
 
       let ethbalance = await web3.eth.getBalance(acc);
       let contractOf = new web3.eth.Contract(NFT_Contract_ABI, NFT_Contract);
-      let getValue = await contractOf.methods.cost().call();
+      let thresholdetails=await contractOf.methods.checkThreshold().call();
+      let getValue =  thresholdetails.price  
       let publicSaleDate = await contractOf.methods.publicSaleDate().call();
       let gettotalsupply = await contractOf.methods.totalSupply().call();
       let getmaxsupply = await contractOf.methods.maxSupply().call();
-      let getmaxMintAmount = await contractOf.methods.maxMintAmount().call();
+      let getmaxMintAmount = await contractOf.methods.maxMintAmountPerTrx().call();
 
       let newtotal = gettotalsupply + count;
 
@@ -405,8 +394,8 @@ function Mint() {
                                 _ngcontent-bhd-c59=""
                                 class="btn btn-eth crypto-btn my-1 py-2 px-1 w-80 my-2"
                                 onClick={() => Connect_Wallet()}
-                                disabled={true}
-                                style={{cursor:"no-drop"}}
+                                // disabled={true}
+                                // style={{cursor:"no-drop"}}
 
                               >
                                 <img
@@ -428,9 +417,9 @@ function Mint() {
                                 <button
                                   _ngcontent-bhd-c59=""
                                   class="btn btn-eth crypto-btn my-1 py-2 px-1 w-80 my-2"
-                                  disabled={true}
+                                  // disabled={true}
                                   onClick={() => Mint_Nft()}
-                                  style={{cursor:"no-drop"}}
+                                  // style={{cursor:"no-drop"}}
                                 >
                                   <img
                                     _ngcontent-bhd-c59=""
