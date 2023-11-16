@@ -179,7 +179,7 @@ function DrawerComponents() {
             Contact
           </Link>
 
-          {/* <NavLink
+          <NavLink
             to="/TreasureMap"
             spy={true}
             smooth={true}
@@ -191,7 +191,7 @@ function DrawerComponents() {
             onClick={handleCloseNavMenu}
           >
             Treasure Map
-          </NavLink> */}
+          </NavLink>
 
           
 

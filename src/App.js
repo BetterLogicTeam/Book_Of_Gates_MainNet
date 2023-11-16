@@ -15,6 +15,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Refferal_Info from "./components/Refferal_Info/Refferal_Info";
 import Admin_Refferal_details from "./components/Admin_Refferal_details/Admin_Refferal_details";
+import Treasure_Hunt from "./components/Treasure_Hunt/Treasure_Hunt";
 
 function App() {
   const [isScrollingDown, setIsScrollingDown] = useState(false);
@@ -69,6 +70,8 @@ function App() {
           <Route path="/TreasureMap" element={<Play_page />} />
           <Route path="/Refferal_Info" element={<Refferal_Info />} />
           <Route path="/Admin_Refferal_details" element={<Admin_Refferal_details />} />
+          <Route path="/Treasure_Hunt" element={<Treasure_Hunt />} />
+
 
 
         </Routes>

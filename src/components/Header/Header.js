@@ -92,11 +92,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Ink Free",
     fontSize: "20px",
     cursor: "pointer",
-    // width: "200px",
-    // [theme.breakpoints.down("xs")]: {
-    //   marginBottom: theme.spacing(2),
-    //   width: "100px",
-    // },
+ 
   },
 }));
 function Header() {
