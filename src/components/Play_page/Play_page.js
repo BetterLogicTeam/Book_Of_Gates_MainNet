@@ -225,7 +225,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                     :
                     toast.error("Gate is Closed!") :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )} style={{ cursor: "pointer" }}>
                 <img src="./sliderImages/gate_1.png" />
@@ -245,11 +245,9 @@ function Play_page({ hours, minutes, seconds, completed }) {
                       :
                       toast.error("Gate is Closed!") :
                     (
-                      toast.error("Gate is Not open jet!")
+                      toast.error("Gate is not open yet!")
                     )
                 )} style={{ cursor: "pointer" }}>
-
-
 
                 <img src="./sliderImages/gate_2.png" />
                 {/* <div className="time_box ssccnd_box">
@@ -263,7 +261,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_3.png", data: "3", number: "31" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
 
@@ -282,7 +280,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_6.png", data: "6", number: "61" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
               } style={{ cursor: "pointer" }}>
@@ -298,7 +296,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_5.png", data: "5", number: "51" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
 
@@ -315,7 +313,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_4.png", data: "4", number: "41" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
 
@@ -332,7 +330,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_7.png", data: "7", number: "71" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
 
@@ -356,7 +354,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_8.png", data: "8", number: "81" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
 
@@ -379,7 +377,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_9.png", data: "9", number: "91" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
               } style={{ cursor: "pointer" }}>
@@ -399,7 +397,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_10.png", data: "10", number: "99" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
 
@@ -418,7 +416,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_11.png", data: "11", number: "75" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
 
@@ -435,7 +433,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_12.png", data: "12", number: "44" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
               } style={{ cursor: "pointer" }}>
@@ -461,7 +459,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                     :
                     toast.error("Gate is Closed!") :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )} style={{ cursor: "pointer" }}>
                 <img src="./sliderImages/gate_1.png" />
@@ -476,7 +474,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_2.png", data: "2", number: "21" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
 
@@ -492,7 +490,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_3.png", data: "3", number: "31" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
 
@@ -508,7 +506,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_4.png", data: "4", number: "41" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
 
@@ -524,7 +522,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_5.png", data: "5", number: "51" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
 
@@ -540,7 +538,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_6.png", data: "6", number: "61" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
               } style={{ cursor: "pointer" }}><img src="./sliderImages/gate_6.png" />
@@ -555,7 +553,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_7.png", data: "7", number: "71" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
 
@@ -571,7 +569,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_8.png", data: "8", number: "81" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
 
@@ -587,7 +585,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_9.png", data: "9", number: "91" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
               } style={{ cursor: "pointer" }}> <img src="./sliderImages/gate_9.png" />
@@ -602,7 +600,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_10.png", data: "10", number: "99" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
 
@@ -618,7 +616,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_11.png", data: "11", number: "75" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
 
@@ -634,7 +632,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                   (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_12.png", data: "12", number: "44" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
                   :
                   (
-                    toast.error("Gate is Not open jet!")
+                    toast.error("Gate is not open yet!")
                   )
               )
               } style={{ cursor: "pointer" }}> <img src="./sliderImages/gate_12.png" />
