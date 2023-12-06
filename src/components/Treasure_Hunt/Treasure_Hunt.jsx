@@ -257,7 +257,7 @@ export default function Treasure_Hunt() {
           </div>
           <div className=" play_header d-flex justify-content-center">
             <p>
-              Gate Status : Open
+              Gate Status : {history.state.gate}
               {/* {Number(Threshold) > Number(history.state.data)
                 ? "Open"
                 : "Close"} */}
@@ -315,12 +315,14 @@ export default function Treasure_Hunt() {
 
           <div className="Luck_div">
             <button
-              className="btn_luck"
+              className="btn_luck mt-5"
               // disabled={checkUser}
               onClick={() =>
-                checkUser
-                  ? toast.error("Sorry! You already try your luck")
-                  : (showModal(), getRandomInt(100))
+                history.state.gate == "Close"
+                  ? toast.error("Gate is Closed!")
+                  : checkUser
+                  ? (showModal(), getRandomInt(100))
+                  : toast.error("Sorry! You already try your luck")
               }
             >
               Try your Luck

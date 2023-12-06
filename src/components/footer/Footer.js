@@ -10,6 +10,8 @@ import { makeStyles } from "@material-ui/core";
 import YouTube from "@material-ui/icons/YouTube";
 import { FaDiscord } from "react-icons/fa";
 import eth from "../../assets/eth.png"
+import blur from "../../assets/blur.png"
+
 import "./Footer.css";
 
 import Modal from "../term_model/Modal";
@@ -130,7 +132,7 @@ function Footer() {
             <a href="https://twitter.com/bookofgates1" target="blank">
               {/* <FacebookIcon className={classes.ico}/>
                 </IconButton>
-                <IconButton 
+                <IconButton
                 onClick={(e) => {
                     e.preventDefault();
                     window.open("http://www.youtube.com/channel/UCFIisLiF7SE4r-fZipgN_wg")
@@ -144,19 +146,21 @@ function Footer() {
             <a href="https://discord.gg/aUKY8zVQVg" target="_blank">
               <FaDiscord className={classes.ico} />
             </a>
-            
-            
+
+
           </div>
           <div className={classes.opensea}>
-          <a href="https://opensea.io/collection/book-of-gates-official-nft" target="_blank">
-              <img src="https://opensea.io/static/images/logos/opensea.svg" className={classes.opensea_btn_img_hxn} />
+          {/* <a href="https://opensea.io/collection/book-of-gates-official-nft" target="_blank"> */}
+          <a href="https://blur.io/" target="_blank">
+
+              <img src={blur} className={classes.opensea_btn_img_hxn} />
             </a>
 
             <a href="#" >
               <img src={eth} className={classes.opensea_btn_img_hxn} />
             </a>
           </div>
-         
+
           <hr className={classes.hr} />
           <h2 className={classes.txt}>
             {" "}
