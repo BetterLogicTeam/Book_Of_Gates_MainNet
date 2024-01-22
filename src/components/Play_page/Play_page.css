@@ -13,7 +13,7 @@
   /* padding: 150px 0px; */
   font-family: Ink Free;
   color: white;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -975,7 +975,7 @@ height: 105rem !important;
 
 @media screen and (max-width:600px) {
   .main_vala{
-    display: none !important;
+    /* display: none !important; */
   }
 }
 

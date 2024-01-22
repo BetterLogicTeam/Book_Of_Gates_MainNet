@@ -14,6 +14,7 @@ import WithCoin from "../../assets/WithCoin.mp4";
 
 import { useRef } from "react";
 import { toast } from "react-toastify";
+import Countdown from "react-countdown";
 
 export default function Treasure_Hunt() {
   let history = useLocation();
@@ -62,8 +63,11 @@ export default function Treasure_Hunt() {
           let ArryData = WalletOwnOf[i];
           // let ArryData = i
 
+          // Wallet_URI = await axios.get(
+          //   `https://teal-high-elephant-254.mypinata.cloud/ipfs/QmRN9mG46UtACjCmtwjnqz2pmDei2tUP6zB23NpFw8wk8C/${WalletOwnOf[i]}.png`
+          // );
           Wallet_URI = await axios.get(
-            `https://teal-high-elephant-254.mypinata.cloud/ipfs/QmRN9mG46UtACjCmtwjnqz2pmDei2tUP6zB23NpFw8wk8C/${WalletOwnOf[i]}.png`
+            `https://red-tiny-piranha-757.mypinata.cloud/ipfs/QmZ1Cqx3sXZvtxtVjBpzUjQZw3hAzEGo8zwxrroQ9dpe29/${WalletOwnOf[i]}.png`
           );
 
           let Image_Url = Wallet_URI.config.url;
@@ -243,18 +247,53 @@ export default function Treasure_Hunt() {
   useEffect(() => {
     get_user_data();
   }, [spinner, checkUser]);
+  const Completionist = () => <span>Expired</span>;
+  const renderer = ({ days, hours, minutes, seconds, completed }) => {
+    if (completed) {
+      // Render a completed state
+      return <Completionist />;
+    } else {
+      // Render a countdown
+      return (
+        <span>
+          {days}DAYS: {hours}HOURS: {minutes}MIN: {seconds}SEC
+        </span>
+      );
+    }
+  };
 
   return (
     <div>
       <div className="Treasure_Hunt_header_main">
         <div className="container">
           <div className="play_header">
-            <h1>Treasure Hunt</h1>
-            <p>Find treasure at every Gate! Your NFT could open the Chest</p>
+            <h1>Treasure Chest</h1>
+            {/* <p>Your NFT could open the Chest</p> */}
+            {/* <p className="black_header_text_p text-white">
+              <Countdown
+                date={new Date("2024-02-02T00:00:00")}
+                renderer={renderer}
+              />
+            </p> */}
           </div>
           <div className="d-flex justify-content-center">
             <img src={history.state.src} alt="" />
           </div>
+              <div className="Luck_div">
+                <button
+                  className="btn_luck mt-5"
+                  // disabled={checkUser}
+                  onClick={() =>
+                    history.state.gate == "Close"
+                      ? toast.error("Gate is Closed!")
+                      : checkUser
+                      ? (showModal(), getRandomInt(100))
+                      : toast.error("Sorry! You already try your luck")
+                  }
+                >
+                  Open Chest
+                </button>
+              </div>
           <div className=" play_header d-flex justify-content-center">
             <p>
               Gate Status : {history.state.gate}
@@ -262,71 +301,98 @@ export default function Treasure_Hunt() {
                 ? "Open"
                 : "Close"} */}
             </p>
+            <p>This Gate will open when 100 NFTs have minted.</p>
           </div>
         </div>
 
-        <div className="container">
+        <div className="">
           <div className="play_header">
-            <h1>User All NFTS</h1>
-            <p>Find treasure at every Gate! Your NFT could open the Chest</p>
+            <h1>How to Play</h1>
+            {/* <p> Your NFT could open the Chest</p> */}
           </div>
-
-          <div className="row">
-            {Array_NFT.map((items, index) => {
-              return (
-                <>
-                  <div className="col-lg-3">
-                    <div
-                      className="game-item"
-                      // disabled={true}
-                      // class="game-item contain"
-                      // style={{
-                      //   cursor:
-                      //     items.selecteddata == true ? "default" : "pointer",
-
-                      //   border:
-                      //     slectedAllnfton.condition == true &&
-                      //     items.selecteddata != true
-                      //       ? "5px solid white"
-                      //       : "none",
-                      // }}
-                      // id={index}
-                      // onClick={() => SelectedCard(index, items.tokenid)}
-                    >
-                      <div class="game-inner">
-                        <img
-                          src={items.Url}
-                          alt="NFT"
-                          style={{ zIndex: "100000" }}
-                          className="image"
-                        />
-                        <div class="game-item__content">
-                          <h4 class="title"> Token ID: {items.ArryData}</h4>
-                        </div>
-                      </div>
-                      {/* <div class="mask"> </div>
-                        <div class="ball"> </div> */}
-                    </div>
+          <div className="play_count_main main_vala">
+            <div className="container">
+              <div className="row mt-4">
+                <div className="col-md-6">
+                  <div className="play_count one_vala">
+                    <span className="play_span">1</span>
+                    <span className="fs-4 mint_nft ms-2">Mint an NFT</span>
                   </div>
-                </>
-              );
-            })}
-          </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="play_count">
+                    <span className="play_span">3</span>
+                    <span className="play_span_2 ms-2">
+                      Click to Open Chest. If you find Gold,
+                    </span>
+                    <br />
+                    <span className="play_span_2 mgin_fv">
+                      we buy your NFT at the Buy Price!
+                    </span>
+                  </div>
+                </div>
+              </div>
 
-          <div className="Luck_div">
-            <button
-              className="btn_luck mt-5"
-              // disabled={checkUser}
-              onClick={() =>
-                history.state.gate == "Close"
-                  ? toast.error("Gate is Closed!")
-                  : checkUser
-                  ? (showModal(), getRandomInt(100))
-                  : toast.error("Sorry! You already try your luck")
-              }
-            >
-              Try your Luck
-            </button>
+              <div className="row mt-5">
+                <div className="col-md-6">
+                  <div className="play_count scnd_vala">
+                    <span className="play_span">2</span>
+                    <span className="play_span_2 ms-2">
+                      List on{" "}
+                      <a
+                        href="https://blur.io/"
+                        className="text-white"
+                        target="_blank"
+                      >
+                        Blur.io
+                      </a>{" "}
+                      at the
+                    </span>
+                    <br />
+                    <span className="play_span_2 mgin_fv"> Buy Price</span>
+                  </div>
+                </div>
+                <div className="col-md-6">
+                  <div className="play_count chotha_vala">
+                    <span className="play_span ">4</span>
+                    <span className="play_span_2 ms-2">
+                      Your NFT is the key. Try all your NFTs
+                    </span>
+                    <br />
+                    <span className="play_span_2 mgin_fv">
+                      on all 12 Chests!
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <div className="row">
+              {Array_NFT.map((items, index) => {
+                return (
+                  <>
+                    <div className="col-lg-3 mt-2">
+                      <div className="game-item">
+                        <div class="game-inner">
+                          <img
+                            src={items.Url}
+                            alt="NFT"
+                            style={{ zIndex: "100000" }}
+                            className="image"
+                          />
+                          <div class="game-item__content">
+                            <h4 class="title"> Token ID: {items.ArryData}</h4>
+                          </div>
+                        </div>
+                        {/* <div class="mask"> </div>
+                        <div class="ball"> </div> */}
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

@@ -219,7 +219,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
           <p className="khali"></p>
           <div className="main_timelin">
             <div className="grid-container">
-              <div className="grid-item" onClick={() => (history("/Treasure_Hunt", { state: { data: "1", src: "./sliderImages/gate_1.png", number: "11", gate: totalSupply > 101 ? gate_data[0]?.Gate_status == false ? "Open" : "Close" : "Close" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))} style={{ cursor: "pointer" }}>
+              <div className="grid-item" onClick={() => (history("/Treasure_Hunt", { state: { data: "1", src: "./sliderImages/Gate1.png", number: "11", gate: totalSupply > 101 ? gate_data[0]?.Gate_status == false ? "Open" : "Closed" : "Closed" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))} style={{ cursor: "pointer" }}>
                 <img src="./sliderImages/gate_1.png" />
               </div>
 
@@ -232,8 +232,8 @@ function Play_page({ hours, minutes, seconds, completed }) {
               <div className="grid-item ssccnd"
                 onClick={() => (history("/Treasure_Hunt", {
                   state: {
-                    src: "./sliderImages/gate_2.png", data: "2", number: "21", gate: totalSupply > 201 ?
-                      gate_data[1]?.Gate_status == false ? "Open" : "Close" : "Close"
+                    src: "./sliderImages/Gate2.png", data: "2", number: "21", gate: totalSupply > 201 ?
+                      gate_data[1]?.Gate_status == false ? "Open" : "Closed" : "Closed"
                   }
                 }), window.scrollTo({ top: 0, behavior: 'smooth' }))} style={{ cursor: "pointer" }}>
 
@@ -243,7 +243,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                 </div> */}
               </div>
 
-              <div className="grid-item thhrrd" onClick={() => (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_3.png", data: "3", number: "31", gate: totalSupply > 300 ? gate_data[2]?.Gate_status == false ? "Open" : "Close" : "Close" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))} style={{ cursor: "pointer" }}>
+              <div className="grid-item thhrrd" onClick={() => (history("/Treasure_Hunt", { state: { src: "./sliderImages/Gate3.png", data: "3", number: "31", gate: totalSupply > 300 ? gate_data[2]?.Gate_status == false ? "Open" : "Closed" : "Closed" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))} style={{ cursor: "pointer" }}>
                 <div className="thhrrd_emg">
                   <img src="./sliderImages/gate_3.png" />
                   {/* <div className="time_box thhrrd_box">
@@ -253,7 +253,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="grid-item chhheva" onClick={() =>
-                (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_6.png", data: "6", number: "61", gate: totalSupply > 2500 ? gate_data[5]?.Gate_status == false ? "Open" : "Close" : "Close" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { src: "./sliderImages/Gate6.png", data: "6", number: "61", gate: totalSupply > 2500 ? gate_data[5]?.Gate_status == false ? "Open" : "Closed" : "Closed" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
               } style={{ cursor: "pointer" }}>
                 <img src="./sliderImages/gate_6.png" />
@@ -263,7 +263,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="grid-item ftth" onClick={() =>
-                (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_5.png", data: "5", number: "51", gate: totalSupply > 1500 ? gate_data[4]?.Gate_status == false ? "Open" : "Close" : "Close" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { src: "./sliderImages/Gate5.png", data: "5", number: "51", gate: totalSupply > 1500 ? gate_data[4]?.Gate_status == false ? "Open" : "Closed" : "Closed" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
               } style={{ cursor: "pointer" }}>
                 <img src="./sliderImages/gate_5.png" />
@@ -273,7 +273,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="ngrid-item frrtth" onClick={() =>
-                (history("/Treasure_Hunt", { state: { src: "./sliderImages/gate_4.png", data: "4", number: "41", gate: totalSupply > 600 ? gate_data[3]?.Gate_status == false ? "Open" : "Close" : "Close" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { src: "./sliderImages/Gate5.png", data: "4", number: "41", gate: totalSupply > 600 ? gate_data[3]?.Gate_status == false ? "Open" : "Closed" : "Closed" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
               } style={{ cursor: "pointer" }}>
                 <img src="./sliderImages/gate_4.png" />
@@ -282,7 +282,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
                 </div> */}
               </div>
 
-              <div className="grid-item svvntth" onClick={() => (history("/Treasure_Hunt", { state: { gate: totalSupply > 3500 ? gate_data[6]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_7.png", data: "7", number: "71" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+              <div className="grid-item svvntth" onClick={() => (history("/Treasure_Hunt", { state: { gate: totalSupply > 3500 ? gate_data[6]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate7.png", data: "7", number: "71" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
               } style={{ cursor: "pointer" }}>
                 <div className="">
                   <img src="./sliderImages/gate_7.png" />
@@ -298,7 +298,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               <div className=""></div>
 
               <div className="aatth" onClick={() =>
-                (history("/Treasure_Hunt", { gate: totalSupply > 4500 ? gate_data[7]?.Gate_status == false ? "Open" : "Close" : "Close", state: { src: "./sliderImages/gate_8.png", data: "8", number: "81" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { gate: totalSupply > 4500 ? gate_data[7]?.Gate_status == false ? "Open" : "Closed" : "Closed", state: { src: "./sliderImages/Gate8.png", data: "8", number: "81" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
 
               } style={{ cursor: "pointer" }}>
@@ -315,7 +315,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               <div className=""></div>
 
               <div className="nntth" onClick={() =>
-                (history("/Treasure_Hunt", { state: { gate: totalSupply > 5500 ? gate_data[8]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_9.png", data: "9", number: "91" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { gate: totalSupply > 5500 ? gate_data[8]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate9.png", data: "9", number: "91" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
               } style={{ cursor: "pointer" }}>
                 <div className="emg_main">
@@ -329,7 +329,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               <div className=""></div>
 
               <div className="tnntth" onClick={() =>
-                (history("/Treasure_Hunt", { state: { gate: totalSupply > 6500 ? gate_data[9]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_10.png", data: "10", number: "99" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { gate: totalSupply > 6500 ? gate_data[9]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate10.png", data: "10", number: "99" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
 
               } style={{ cursor: "pointer" }}>
@@ -342,7 +342,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="elvnnth" onClick={() =>
-                (history("/Treasure_Hunt", { state: { gate: totalSupply > 8500 ? gate_data[10]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_11.png", data: "11", number: "75" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { gate: totalSupply > 8500 ? gate_data[10]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate11.png", data: "11", number: "75" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
 
               } style={{ cursor: "pointer" }}>
@@ -353,7 +353,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="last_itm twllth" onClick={() =>
-                (history("/Treasure_Hunt", { state: { gate: totalSupply > 10008 ? gate_data[11]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_12.png", data: "12", number: "44" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { gate: totalSupply > 10008 ? gate_data[11]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate12.png", data: "12", number: "44" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
               } style={{ cursor: "pointer" }}>
                 <img src="./sliderImages/gate_12.png" />
@@ -374,7 +374,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               <div className="grid-item" onClick={() => (history("/Treasure_Hunt", {
                 state: {
                   gate: totalSupply > 101 ?
-                    gate_data[0]?.Gate_status == false ? "Open" : "Close" : "Close", data: "1", src: "./sliderImages/gate_1.png", number: "11"
+                    gate_data[0]?.Gate_status == false ? "Open" : "Closed" : "Closed", data: "1", src: "./sliderImages/Gate1.png", number: "11"
                 }
               }), window.scrollTo({ top: 0, behavior: 'smooth' }))
               } style={{ cursor: "pointer" }}>
@@ -385,7 +385,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="grid-item" onClick={() =>
-                (history("/Treasure_Hunt", { state: { gate: totalSupply > 300 ? gate_data[1]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_2.png", data: "2", number: "21" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { gate: totalSupply > 300 ? gate_data[1]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate2.png", data: "2", number: "21" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
 
               } style={{ cursor: "pointer" }}>    <img src="./sliderImages/gate_2.png" />
@@ -395,7 +395,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="grid-item" onClick={() =>
-                (history("/Treasure_Hunt", { state: { gate: totalSupply > 300 ? gate_data[2]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_3.png", data: "3", number: "31" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { gate: totalSupply > 300 ? gate_data[2]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate3.png", data: "3", number: "31" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
 
               } style={{ cursor: "pointer" }}> <img src="./sliderImages/gate_3.png" />
@@ -405,7 +405,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="grid-item " onClick={() =>
-                (history("/Treasure_Hunt", { state: { gate: totalSupply > 600 ? gate_data[3]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_4.png", data: "4", number: "41" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { gate: totalSupply > 600 ? gate_data[3]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate4.png", data: "4", number: "41" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
 
               } style={{ cursor: "pointer" }}>   <img src="./sliderImages/gate_4.png" />
@@ -415,7 +415,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="grid-item" onClick={() =>
-                (history("/Treasure_Hunt", { state: { gate: totalSupply > 1500 ? gate_data[4]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_5.png", data: "5", number: "51" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { gate: totalSupply > 1500 ? gate_data[4]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate5.png", data: "5", number: "51" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
 
               } style={{ cursor: "pointer" }}>  <img src="./sliderImages/gate_5.png" />
@@ -425,7 +425,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="grid-item" onClick={() =>
-                (history("/Treasure_Hunt", { state: { gate: totalSupply > 2500 ? gate_data[5]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_6.png", data: "6", number: "61" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { gate: totalSupply > 2500 ? gate_data[5]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate6.png", data: "6", number: "61" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
               } style={{ cursor: "pointer" }}><img src="./sliderImages/gate_6.png" />
                 {/* <div className="time_box">
@@ -434,7 +434,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="grid-item" onClick={() =>
-                (history("/Treasure_Hunt", { state: { gate: totalSupply > 3500 ? gate_data[6]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_7.png", data: "7", number: "71" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { gate: totalSupply > 3500 ? gate_data[6]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate7.png", data: "7", number: "71" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
 
               } style={{ cursor: "pointer" }}>    <img src="./sliderImages/gate_7.png" />
@@ -444,7 +444,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="grid-item" onClick={() =>
-                (history("/Treasure_Hunt", { state: { gate: totalSupply > 4500 ? gate_data[7]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_8.png", data: "8", number: "81" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { gate: totalSupply > 4500 ? gate_data[7]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate8.png", data: "8", number: "81" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
               } style={{ cursor: "pointer" }}> <img src="./sliderImages/gate_8.png" />
                 {/* <div className="time_box">
@@ -453,7 +453,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="grid-item" onClick={() =>
-                (history("/Treasure_Hunt", { state: { gate: totalSupply > 5500 ? gate_data[8]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_9.png", data: "9", number: "91" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { gate: totalSupply > 5500 ? gate_data[8]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate9.png", data: "9", number: "91" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
               } style={{ cursor: "pointer" }}> <img src="./sliderImages/gate_9.png" />
                 {/* <div className="time_box">
@@ -462,7 +462,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="grid-item" onClick={() =>
-                (history("/Treasure_Hunt", { state: { gate: totalSupply > 6500 ? gate_data[9]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_10.png", data: "10", number: "99" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { gate: totalSupply > 6500 ? gate_data[9]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate10.png", data: "10", number: "99" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
 
               } style={{ cursor: "pointer" }}>    <img src="./sliderImages/gate_10.png" />
@@ -472,7 +472,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="mt-5 grid-item" onClick={() =>
-                (history("/Treasure_Hunt", { state: { gate: totalSupply > 8500 ? gate_data[10]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_11.png", data: "11", number: "75" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { gate: totalSupply > 8500 ? gate_data[10]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate11.png", data: "11", number: "75" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
 
               } style={{ cursor: "pointer" }}>  <img src="./sliderImages/gate_11.png" />
@@ -482,7 +482,7 @@ function Play_page({ hours, minutes, seconds, completed }) {
               </div>
 
               <div className="grid-item" onClick={() =>
-                (history("/Treasure_Hunt", { state: { gate: totalSupply > 10008 ? gate_data[11]?.Gate_status == false ? "Open" : "Close" : "Close", src: "./sliderImages/gate_12.png", data: "12", number: "44" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
+                (history("/Treasure_Hunt", { state: { gate: totalSupply > 10008 ? gate_data[11]?.Gate_status == false ? "Open" : "Closed" : "Closed", src: "./sliderImages/Gate12.png", data: "12", number: "44" } }), window.scrollTo({ top: 0, behavior: 'smooth' }))
 
               } style={{ cursor: "pointer" }}> <img src="./sliderImages/gate_12.png" />
                 {/* <div className="time_box">
