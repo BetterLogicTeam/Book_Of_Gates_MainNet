@@ -265,8 +265,10 @@ export default function Treasure_Hunt() {
   return (
     <div>
       <div className="Treasure_Hunt_header_main">
+        <div className="hunter_treasure_bg">
+
         <div className="container">
-          <div className="play_header">
+          <div className="play_header text_hunt">
             <h1>Treasure Chest</h1>
             {/* <p>Your NFT could open the Chest</p> */}
             {/* <p className="black_header_text_p text-white">
@@ -295,14 +297,17 @@ export default function Treasure_Hunt() {
                 </button>
               </div>
           <div className=" play_header d-flex justify-content-center">
-            <p>
+            <p
+             style={{color:"#88301E",fontSize:"3rem"}}
+            >
               Gate Status : {history.state.gate}
               {/* {Number(Threshold) > Number(history.state.data)
                 ? "Open"
                 : "Close"} */}
             </p>
-            <p>This Gate will open when 100 NFTs have minted.</p>
+            <p      style={{color:"#88301E",fontSize:"2.5rem"}}>This Gate will open when 100 NFTs have minted.</p>
           </div>
+        </div>
         </div>
 
         <div className="">

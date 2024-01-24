@@ -1,4 +1,5 @@
 .Treasure_Hunt_header_main {
+    /* background-image: url('../../assets/mint_bg.png'); */
     background-color: rgb(150, 38, 29);
     /* padding: 150px 0px; */
     font-family: Ink Free;
@@ -9,6 +10,16 @@
     justify-content: center;
     padding-bottom: 2rem;
     padding-top: 5rem;
+}
+.text_hunt h1{
+    color: #88301E;
+}
+.hunter_treasure_bg{
+    background-image: url('../../assets/mint_bg.png');
+    background-position: center;
+    background-size: cover;
+    padding:50px  5px;
+
 }
 
 .Img_card {
@@ -264,7 +275,7 @@
 }
 
 .btn_luck {
-    background-color: white;
+    background-color: #88301E;
     padding: 0.5rem 1rem;
     border-radius: 30px;
     font-size: 30px;
@@ -272,7 +283,7 @@
     font-weight: 500 !important;
     cursor: pointer;
     border: none;
-    color: #88301E;
+    color: #fff;
 
 }
 
