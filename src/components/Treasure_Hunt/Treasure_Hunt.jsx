@@ -266,51 +266,50 @@ export default function Treasure_Hunt() {
     <div>
       <div className="Treasure_Hunt_header_main">
         <div className="hunter_treasure_bg">
-
-        <div className="container">
-          <div className="play_header text_hunt">
-            <h1>Treasure Chest</h1>
-            {/* <p>Your NFT could open the Chest</p> */}
-            {/* <p className="black_header_text_p text-white">
+          <div className="container">
+            <div className="play_header text_hunt">
+              <h1>Treasure Chest</h1>
+              {/* <p>Your NFT could open the Chest</p> */}
+              {/* <p className="black_header_text_p text-white">
               <Countdown
                 date={new Date("2024-02-02T00:00:00")}
                 renderer={renderer}
               />
             </p> */}
-          </div>
-          <div className="d-flex justify-content-center">
-            <img src={history.state.src} alt="" />
-          </div>
-              <div className="Luck_div">
-                <button
-                  className="btn_luck mt-5"
-                  // disabled={checkUser}
-                  onClick={() =>
-                    history.state.gate == "Close"
-                      ? toast.error("Gate is Closed!")
-                      : checkUser
-                      ? (showModal(), getRandomInt(100))
-                      : toast.error("Sorry! You already try your luck")
-                  }
-                >
-                  Open Chest
-                </button>
-              </div>
-          <div className=" play_header d-flex justify-content-center">
-            <p
-             style={{color:"#88301E",fontSize:"3rem"}}
-            >
-              Gate Status : {history.state.gate}
-              {/* {Number(Threshold) > Number(history.state.data)
+            </div>
+            <div className="d-flex justify-content-center">
+              <img src={history.state.src} alt="" />
+            </div>
+            <div className="Luck_div">
+              <button
+                className="btn_luck mt-5"
+                // disabled={checkUser}
+                onClick={() =>
+                  history.state.gate == "Close"
+                    ? toast.error("Gate is Closed!")
+                    : checkUser
+                    ? (showModal(), getRandomInt(100))
+                    : toast.error("Sorry! You already try your luck")
+                }
+              >
+                Open Chest
+              </button>
+            </div>
+            <div className=" play_header d-flex justify-content-center" >
+              <p style={{ color: "#88301E", fontSize: "3rem" }}>
+                Gate Status : {history.state.gate}
+                {/* {Number(Threshold) > Number(history.state.data)
                 ? "Open"
                 : "Close"} */}
-            </p>
-            <p      style={{color:"#88301E",fontSize:"2.5rem"}}>This Gate will open when 100 NFTs have minted.</p>
+              </p>
+              <p style={{ color: "#88301E", fontSize: "2.5rem" }} id="botttom">
+                This Gate will open when 100 NFTs have minted.
+              </p>
+            </div>
           </div>
         </div>
-        </div>
 
-        <div className="">
+        <div className="" >
           <div className="play_header">
             <h1>How to Play</h1>
             {/* <p> Your NFT could open the Chest</p> */}

@@ -43,7 +43,7 @@ function App() {
   const handleScrollDown = () => {
     window.document.getElementById("botttom").scrollIntoView();
   };
-
+console.log("isScrollingDown",isScrollingDown);
   return (
     <div className="App">
       {isScrollingDown && (
@@ -52,7 +52,7 @@ function App() {
         </div>
       )}
       {!isScrollingDown && (
-        <a href="#botttom" className="scroll-button" onClick={handleScrollDown}>
+        <a  className="scroll-button" onClick={handleScrollDown}>
           <BsArrowDownSquareFill />
         </a>
       )}
@@ -67,10 +67,10 @@ function App() {
           <Route path="/mint" element={<Mint />} />
           <Route path="/whitelist" element={<Whitelist />} />
           <Route path="/presale" element={<Presale />} />
-          <Route path="/TreasureMap" element={<Play_page />} />
+          <Route path="/TreasureMap" element={<Play_page isScrollingDown={isScrollingDown} />} />
           <Route path="/Refferal_Info" element={<Refferal_Info />} />
           <Route path="/Admin_Refferal_details" element={<Admin_Refferal_details />} />
-          <Route path="/Treasure_Hunt" element={<Treasure_Hunt />} />
+          <Route path="/Treasure_Hunt" element={<Treasure_Hunt  />} />
 
 
 

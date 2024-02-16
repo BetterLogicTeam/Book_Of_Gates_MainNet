@@ -12,14 +12,15 @@ import { toast } from "react-toastify";
 import Web3 from "web3";
 // import 'aos/dist/aos.css';
 
-function Play_page({ hours, minutes, seconds, completed }) {
+function Play_page({ isScrollingDown }) {
   const [gate_data, setgate_data] = useState([])
   const [totalSupply, settotalSupply] = useState(0)
+  const [timeCompeleted, settimeCompeleted] = useState(false)
   const Completionist = () => <span>Expired</span>;
   const history = useNavigate()
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
-      // Render a completed state
+      settimeCompeleted(true)
       return <Completionist />;
     } else {
       // Render a countdown
@@ -44,7 +45,6 @@ function Play_page({ hours, minutes, seconds, completed }) {
       let gettotalsupply = await contractOf.methods.totalSupply().call();
       console.log("gettotalsupply", gettotalsupply);
       settotalSupply(gettotalsupply)
-
       let res = await axios.get(
         `https://gate.womenempowerment.online/Get_All_Gate_Details`
       );
@@ -181,38 +181,43 @@ function Play_page({ hours, minutes, seconds, completed }) {
         </div>
       </div>
 
-      <div className="Timer_bck">
-        <div
-          className="black_header"
-          data-aos="fade-down"
-          data-aos-easing="linear"
-          data-aos-duration="1000"
-        >
-          <div class="grid-container">
-            <div class="grid-item">
-              <img className="img-fluid" src={FullClockAnimated}></img>
-            </div>
+      {
+        isScrollingDown && timeCompeleted==false && <>
+          <div className="Timer_bck">
+            <div
+              className="black_header"
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1000"
+            >
+              <div class="grid-container">
+                <div class="grid-item">
+                  <img className="img-fluid" src={FullClockAnimated}></img>
+                </div>
 
-            <div class="grid-item timer_text">
-              <div className="black_header_text">
-                <p className="black_header_text_p ">
-                  <Countdown
-                    date={new Date("2023-12-19T00:00:00")}
-                    renderer={renderer}
-                  />
-                  ,
-                </p>
-                <p className="black_header_text_p2">
-                  Mint before clock expires and Buy Price DOUBLES!
-                  <br />  Up to 250 Eth hidden below
-                </p>
+                <div class="grid-item timer_text">
+                  <div className="black_header_text">
+                    <p className="black_header_text_p ">
+                      <Countdown
+                        date={new Date("2024-01-19T00:00:00")}
+                        renderer={renderer}
+                      />
+                      ,
+                    </p>
+                    <p className="black_header_text_p2">
+                      Mint before clock expires and Buy Price DOUBLES!
+                      <br />  Up to 250 Eth hidden below
+                    </p>
+                  </div>
+                </div>
+                {/* <div class="grid-item">2</div> */}
               </div>
+              <div id="botttom"></div>
             </div>
-            {/* <div class="grid-item">2</div> */}
           </div>
-          <div id="botttom"></div>
-        </div>
-      </div>
+
+        </>
+      }
 
       <div className="main_bgg">
         <div className="container">
