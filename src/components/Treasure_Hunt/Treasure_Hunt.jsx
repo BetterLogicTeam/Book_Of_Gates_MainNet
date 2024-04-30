@@ -263,7 +263,7 @@ export default function Treasure_Hunt() {
   };
 
   return (
-    <div>
+    <div className="treasure_main_page_here">
       <div className="Treasure_Hunt_header_main">
         <div className="hunter_treasure_bg">
           <div className="container">
@@ -415,7 +415,9 @@ export default function Treasure_Hunt() {
               ref={videoRef}
               height="400"
               autoPlay
-              controls={false}
+              
+              controls
+              loop
             >
               <source src={WithCoin} type="video/mp4" />
             </video>
@@ -428,11 +430,13 @@ export default function Treasure_Hunt() {
         ) : (
           <>
             <video
-              style={{ width: "30rem" }}
+              className="noCoin_video_here"
               ref={videoRef}
               height="350"
               autoPlay
-              controls={false}
+              
+              controls
+              loop
             >
               <source src={NoCoin} type="video/mp4" />
             </video>

@@ -6,7 +6,8 @@ import { makeStyles, useMediaQuery, useTheme, Grid } from "@material-ui/core";
 
 import "./Header.css";
 import DrawerComponents from "./Drawer";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -128,8 +129,30 @@ function Header() {
                 <Grid container justifyContent="flex-end" alignItems="center">
                   <Grid item xs={6} sm={6} md={4} lg={4} style={{ width: "auto" }}>
                     {" "}
-                    <a href="https://discord.com/invite/aUKY8zVQVg" target="_blank">
+                    {/* <a href="https://discord.com/invite/aUKY8zVQVg" target="_blank">
 
+                      <button
+                        className={classes.navBarTextbtn}
+                    
+                      >
+                        Discord
+                       
+                      </button>
+                    </a> */}
+                    {/* <a href="https://discord.com/invite/aUKY8zVQVg" target="_blank"> */}
+
+
+                    <NavLink
+            to="/TreasureMap"
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            offset={-95}
+            duration={1000}
+            isDynamic={true}
+            
+        
+          >
                       <button
                         className={classes.navBarTextbtn}
                       // onClick={(e) => {
@@ -140,9 +163,12 @@ function Header() {
                       //   );
                       // }}
                       >
-                        Discord
+                        {/* Discord */}
+                        Treasure Map
                       </button>
-                    </a>
+                      </NavLink>
+                     
+                    {/* </a> */}
 
 
                   </Grid>

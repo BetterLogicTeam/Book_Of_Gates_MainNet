@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 2rem;
 }
 
 .mgin_fv{
@@ -113,6 +114,9 @@
 @media screen and (max-width: 600px) {
   .one_vala,.scnd_vala{
     margin-left: 0px !important;
+  }
+  .play_header_main{
+    height: auto !important;
   }
 }
 
