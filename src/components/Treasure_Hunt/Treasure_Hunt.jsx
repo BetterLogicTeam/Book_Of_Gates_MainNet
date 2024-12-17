@@ -15,6 +15,9 @@ import WithCoin from "../../assets/WithCoin.mp4";
 import { useRef } from "react";
 import { toast } from "react-toastify";
 import Countdown from "react-countdown";
+import { getRendomNumber } from "../../helper/RendomNumber";
+
+const CharacterNFT = [39, 49, 50, 71, 9, 88, 21, 69];
 
 export default function Treasure_Hunt() {
   let history = useLocation();
@@ -22,7 +25,7 @@ export default function Treasure_Hunt() {
 
   const [Array_NFT, setArray_NFT] = useState([]);
   const [maxsupply, setmaxsupply] = useState("--");
-  const [totalsupply, settotalsupply] = useState("--");
+  const [totalsupply, settotalsupply] = useState(0);
   const [Threshold, setThreshold] = useState("--");
   const [NFTmintedPercentce, setNFTmintedPercent] = useState("--");
   const [publicSaleDate, setpublicSaleDate] = useState("--");
@@ -30,6 +33,10 @@ export default function Treasure_Hunt() {
   const [random_Number, setrandom_Number] = useState(0);
   const [checkUser, setcheckUser] = useState(true);
   const [spinner, setspinner] = useState(false);
+  const [getDetails, setgetDetails] = useState([]);
+  const [status, setstatus] = useState("");
+
+  // console.log("history.state.number", getDetails);
 
   let navigate = useNavigate();
   const showModal = () => {
@@ -54,6 +61,16 @@ export default function Treasure_Hunt() {
 
       let acc = await loadWeb3();
       if (acc) {
+        let res = await axios.get(
+          `https://server.bookofgatesofficial.com/Get_Details?user_address=${acc}`
+        );
+        // console.log("Get_data", res?.data);
+        if (res?.data?.success) {
+          setgetDetails(res?.data?.data);
+          setcheckUser(true);
+        } else {
+          setcheckUser(false);
+        }
         let WalletOwnOf = await contractOf.methods.walletOfOwner(acc).call();
         let wallet_Length = WalletOwnOf.length;
         // console.log("collection", WalletOwnOf);
@@ -93,6 +110,7 @@ export default function Treasure_Hunt() {
       let getmaxsupply = await contractOf.methods.maxSupply().call();
       let gettotalsupply = await contractOf.methods.totalSupply().call();
       let publicSaleDate = await contractOf.methods.publicSaleDate().call();
+      // console.log("gettotalsupply", gettotalsupply);
       // let price = await contractOf.methods.cost().call();
 
       if (Number(gettotalsupply) <= Number(100)) {
@@ -137,6 +155,7 @@ export default function Treasure_Hunt() {
 
   useEffect(() => {
     ShowCollection();
+
     getdata();
   }, []);
 
@@ -158,29 +177,36 @@ export default function Treasure_Hunt() {
     };
   }, [isModalOpen]);
 
-  const Winner = async () => {
+  const WinnerReward = async () => {
     try {
       let acc = await loadWeb3();
       setspinner(true);
-      let res = await axios.post(
-        "https://gate.womenempowerment.online/add_Gate_User",
-        {
-          user_address: acc,
-          Iswinner: true,
-          IsfreeNFT: false,
-          IsPDF: false,
+      const statusPayloadMap = {
+        BuyBackReward: { BuyBackReward: true },
+        CharacterNFT: { CharacterNFT: 1 },
+        LimitedEditioncovers: { LimitedEditioncovers: true },
+        GraphicNovel: { GraphicNovel: 1 },
+      };
+
+      const payload = statusPayloadMap[status] || {};
+      // console.log("status", status);
+      if (Object.keys(payload).length > 0) {
+        try {
+          const res = await axios.post(
+            "https://server.bookofgatesofficial.com/AddRewardRecorder",
+            {
+              user_address: acc,
+              Gate_No: history.state?.data,
+              type: status,
+              ...payload,
+            }
+          );
+          // Optionally handle the response here
+        } catch (error) {
+          console.error("Error posting reward data:", error);
         }
-      );
-      // console.log("NFT", res.data);
-      if (res.data.success == true) {
-        let GateRes = await axios.post(
-          "https://gate.womenempowerment.online/add_Gate_details",
-          {
-            Gate_No: history.state.data,
-            Gate_status: true,
-          }
-        );
       }
+
       handleCancel();
       setspinner(false);
       navigate("/TreasureMap");
@@ -192,61 +218,22 @@ export default function Treasure_Hunt() {
   const Losser = async (check) => {
     try {
       let acc = await loadWeb3();
-      if (check == "NFT") {
-        setspinner(true);
-        let res = await axios.post(
-          "https://gate.womenempowerment.online/add_Gate_User",
-          {
-            user_address: acc,
-            Iswinner: false,
-            IsfreeNFT: true,
-            IsPDF: false,
-          }
-        );
-        // console.log("NFT", res.data);
-        handleCancel();
-        setspinner(false);
-      } else {
-        setspinner(true);
-
-        let res = await axios.post(
-          "https://gate.womenempowerment.online/add_Gate_User",
-          {
-            user_address: acc,
-            Iswinner: false,
-            IsfreeNFT: false,
-            IsPDF: true,
-          }
-        );
-        // console.log("PDF", res.data);
-        handleCancel();
-        setspinner(false);
-      }
+      setspinner(true);
+      let res = await axios.post("https://server.bookofgatesofficial.com/AddRewardRecorder", {
+        user_address: acc,
+        Gate_No: history.state?.data,
+        GraphicNovel: 1,
+        type: status,
+      });
+      // console.log("NFT", res.data);
+      handleCancel();
+      setspinner(false);
     } catch (error) {
       setspinner(false);
       console.log(error);
     }
   };
 
-  const get_user_data = async () => {
-    try {
-      let acc = await loadWeb3();
-      let res = await axios.get(
-        `https://gate.womenempowerment.online/Get_One_User?user_address=${acc}`
-      );
-      // console.log("Get_data", res?.data);
-      if (res?.data?.success) {
-        setcheckUser(true);
-      } else {
-        setcheckUser(false);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    get_user_data();
-  }, [spinner, checkUser]);
   const Completionist = () => <span>Expired</span>;
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
@@ -259,6 +246,33 @@ export default function Treasure_Hunt() {
           {days}DAYS: {hours}HOURS: {minutes}MIN: {seconds}SEC
         </span>
       );
+    }
+  };
+
+  const showChestResult = async () => {
+    try {
+      // console.log("Tayyab",getDetails?.BuyBackReward,(getDetails?.BuyBackReward==true && (Number(history?.state?.number) == 11)))
+      let sumNumer = Number(history?.state?.number) + Number("8");
+      if (
+        getDetails?.BuyBackReward == false &&
+        Number(history?.state?.number) == getRendomNumber(100)
+      ) {
+        setstatus("BuyBackReward");
+      } else if (
+        getDetails?.LimitedEditioncovers == false &&
+        Number(sumNumer) == getRendomNumber(150)
+      ) {
+        setstatus("LimitedEditioncovers");
+      } else if (
+        getDetails?.CharacterNFT <= 2 &&
+        Number(sumNumer + Number(3)) == getRendomNumber(totalsupply)
+      ) {
+        setstatus("CharacterNFT");
+      } else {
+        setstatus("GraphicNovel");
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -288,14 +302,14 @@ export default function Treasure_Hunt() {
                   history.state.gate == "Close"
                     ? toast.error("Gate is Closed!")
                     : checkUser
-                    ? (showModal(), getRandomInt(100))
+                    ? (showModal(), showChestResult())
                     : toast.error("Sorry! You already try your luck")
                 }
               >
                 Open Chest
               </button>
             </div>
-            <div className=" play_header d-flex justify-content-center" >
+            <div className=" play_header d-flex justify-content-center">
               <p style={{ color: "#88301E", fontSize: "3rem" }}>
                 Gate Status : {history.state.gate}
                 {/* {Number(Threshold) > Number(history.state.data)
@@ -309,7 +323,7 @@ export default function Treasure_Hunt() {
           </div>
         </div>
 
-        <div className="" >
+        <div className="">
           <div className="play_header">
             <h1>How to Play</h1>
             {/* <p> Your NFT could open the Chest</p> */}
@@ -408,22 +422,31 @@ export default function Treasure_Hunt() {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        {Number(history.state.number) == Number(random_Number) ? (
+        {status == "BuyBackReward" ||
+        status == "CharacterNFT" ||
+        status == "LimitedEditioncovers" ? (
           <>
             <video
               style={{ width: "30rem" }}
               ref={videoRef}
               height="400"
               autoPlay
-              
               controls
               loop
             >
               <source src={WithCoin} type="video/mp4" />
             </video>
             <div className="btn_Fotter_a">
-              <button className="btn" onClick={() => Winner()}>
-                {spinner ? "Loading..." : "   Get Reward"}
+              <button className="btn" onClick={() => WinnerReward()}>
+                {spinner
+                  ? "Loading..."
+                  : status == "BuyBackReward"
+                  ? "Buy Back Reward"
+                  : status == "CharacterNFT"
+                  ? "Character NFT"
+                  : status == "LimitedEditioncovers"
+                  ? "Limited Edition Covers"
+                  : ""}
               </button>
             </div>
           </>
@@ -434,14 +457,13 @@ export default function Treasure_Hunt() {
               ref={videoRef}
               height="350"
               autoPlay
-              
               controls
               loop
             >
               <source src={NoCoin} type="video/mp4" />
             </video>
             <div className="btn_Fotter_a">
-              <button className="btn" onClick={() => Losser("PDF")}>
+              {/* <button className="btn" onClick={() => Losser("PDF")}>
                 <a
                   href="./Comic.pdf"
                   download="./Comic.pdf"
@@ -449,9 +471,11 @@ export default function Treasure_Hunt() {
                 >
                   {spinner ? "Loading..." : "  Download Comics PDF"}
                 </a>
-              </button>
+              </button> */}
               <button className="btn" onClick={() => Losser("NFT")}>
-                {spinner ? "Loading..." : "   Get Free NFT"}
+                {spinner
+                  ? "Loading..."
+                  : status == "GraphicNovel" && "Graphic Novel"}
               </button>
             </div>
           </>

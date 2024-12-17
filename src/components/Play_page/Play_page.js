@@ -46,9 +46,9 @@ function Play_page({ isScrollingDown }) {
       console.log("gettotalsupply", gettotalsupply);
       settotalSupply(gettotalsupply)
       let res = await axios.get(
-        `https://gate.womenempowerment.online/Get_All_Gate_Details`
+        `https://server.bookofgatesofficial.com/Get_All_Gate_Details`
       );
-      console.log("Get_data", res?.data);
+      // console.log("Get_data", res?.data);
 
       if (res.data.success == true) {
         setgate_data(res?.data?.data)
